@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import jobs.views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # path('request_str', 'location_to_send_request_to', name='name_for_url'),
+    path('', jobs.views.home, name='home')
 ]
