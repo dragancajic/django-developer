@@ -19,6 +19,7 @@ packaging==24.1
 pathspec==0.12.1
 pillow==10.3.0
 platformdirs==4.2.2
+psycopg2-binary==2.9.9
 pylint==3.2.4
 pylint-django==2.5.5
 pylint-plugin-utils==0.8.2
