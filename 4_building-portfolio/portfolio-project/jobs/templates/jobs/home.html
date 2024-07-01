@@ -3,9 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hello, Dragan!</title>
+	<title>Portfolio Website</title>
 </head>
 <body>
 	<h1>Hello, Драган!</h1>
+	<h2>My jobs and projects:</h2>
+	{% comment %} {% for job in jobs.all %} {% endcomment %}
+	{% comment "or like this" %}{% endcomment %}
+	{% for job in jobs %}
+		<p>{{ job.summary }}</p>
+	{% endfor %}
 </body>
 </html>
