@@ -14,6 +14,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# configuration for `static` files
+from django.conf import settings
+from django.conf.urls.static import static
+
 from django.contrib import admin
 from django.urls import path
 import jobs.views
@@ -22,4 +26,4 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # path('request_str', 'location_to_send_request_to', name='name_for_url'),
     path('', jobs.views.home, name='home')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
